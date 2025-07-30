@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "1072110211436",
+    "firebase_url": "https://ride-mitra-12a5b-default-rtdb.firebaseio.com",
+    "project_id": "ride-mitra-12a5b",
+    "storage_bucket": "ride-mitra-12a5b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1072110211436:android:0e54ee6b3a9dbf91052349",
+        "android_client_info": {
+          "package_name": "com.example.ride_mitra"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfIUfApNo61xdJWWblbBbNTV-6l6Ffo-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1072110211436:android:0b2e548db13793a6052349",
+        "android_client_info": {
+          "package_name": "com.example.ride_mitra_new"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfIUfApNo61xdJWWblbBbNTV-6l6Ffo-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
