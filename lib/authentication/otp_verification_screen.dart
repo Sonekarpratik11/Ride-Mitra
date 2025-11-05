@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ride_mitra_new/role_selection_screen.dart'; // Make sure this path is correct
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+import 'package:ride_mitra_new/homescreen/homescreen.dart';
 
 class OTPVerificationScreen extends StatefulWidget {
   final String verificationId;
@@ -31,7 +31,8 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
       );
 
       // Step 2: Sign in the user
-      UserCredential userCredential = await FirebaseAuth.instance.signInWithCredential(credential);
+      UserCredential userCredential = await FirebaseAuth.instance
+          .signInWithCredential(credential);
       User? user = userCredential.user;
 
       if (user != null) {
@@ -45,7 +46,7 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
         // Step 4: Navigate to Role Selection Screen
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (_) => RoleSelectionScreen()),
+          MaterialPageRoute(builder: (_) => RideMitraHomeScreen()),
         );
       } else {
         throw Exception("User is null after sign-in.");
@@ -67,7 +68,10 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("OTP sent to +91 ${widget.phoneNumber}", style: TextStyle(fontSize: 16)),
+            Text(
+              "OTP sent to +91 ${widget.phoneNumber}",
+              style: TextStyle(fontSize: 16),
+            ),
             SizedBox(height: 10),
             TextField(
               controller: _otpController,
@@ -81,9 +85,9 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
             _isVerifying
                 ? CircularProgressIndicator()
                 : ElevatedButton(
-              onPressed: _verifyOTP,
-              child: Text("Verify OTP"),
-            ),
+                    onPressed: _verifyOTP,
+                    child: Text("Verify OTP"),
+                  ),
           ],
         ),
       ),

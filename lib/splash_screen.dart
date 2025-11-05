@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:ride_mitra_new/role_selection_screen.dart';
+import 'package:flutter/material.dart';
+import 'package:ride_mitra_new/homescreen/homescreen.dart';
 
 import 'authentication/phone_input_screen.dart';
 
@@ -26,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
       // Already logged in
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => RoleSelectionScreen()),
+        MaterialPageRoute(builder: (_) => RideMitraHomeScreen()),
       );
     } else {
       // Not logged in
